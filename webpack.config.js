@@ -39,7 +39,8 @@ module.exports = {
     port: 3000,
 
     // Public path is root of content base
-    publicPath: "/",
+		publicPath: "/",
+		historyApiFallback: true
   },
   optimization: {
     splitChunks: {

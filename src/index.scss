@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 @import './variables';
 
+html,
 body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
 	font-family: 'Nunito', sans-serif;
 	color: $text-gray;
+	background-color: $background-gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -25,4 +34,12 @@ a {
 
 .text-center {
 	text-align: center;
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+
+.mb-0 {
+	margin-bottom: 0;
 }
