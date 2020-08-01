@@ -42,6 +42,7 @@
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-react": "^7.20.5",
     "eslint-watch": "^7.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "jest": "^26.2.2",
     "jest-enzyme": "^7.1.2",
     "node-sass": "^4.14.1",

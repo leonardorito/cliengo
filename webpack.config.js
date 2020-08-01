@@ -1,10 +1,14 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/index.js",
+  },
   output: {
-    path: path.join(__dirname, "public"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "public"),
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js"
   },
   module: {
     rules: [
@@ -26,7 +30,7 @@ module.exports = {
       },
     ],
   },
-  devtool: "cheap-module-eval-source-map",
+  devtool: "",
   devServer: {
     contentBase: path.join(__dirname, "public"),
     // Enable compression
@@ -40,4 +44,27 @@ module.exports = {
     // Public path is root of content base
     publicPath: "/",
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: './public/template.html',
+			inject: true
+		})
+	],
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all'
+				}
+			}
+		}
+	}
 };
