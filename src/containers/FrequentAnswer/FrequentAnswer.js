@@ -45,7 +45,7 @@ const FrequentAnswer = () => {
           ))}
       </div>
       {showModal && <Modal show={showModal} modalClosed={handleModal}>
-        <ModalAnswerContent data={selectedAnswer} save={el => handleActive(el)} />
+        <ModalAnswerContent data={selectedAnswer} save={el => handleActive(el)} close={handleModal} />
       </Modal>}
     </div>
   );

@@ -3,7 +3,7 @@ import "./ModalAnswerContent.scss";
 import Button from "../Button/Button";
 import SwitchToggle from "../SwitchToggle/SwitchToggle";
 
-const ModalAnswerContent = ({ save, data }) => {
+const ModalAnswerContent = ({ save, data, close }) => {
   const [description, setDescription] = useState(data.description);
   const [active, setActive] = useState(data.active);
 
@@ -30,7 +30,7 @@ const ModalAnswerContent = ({ save, data }) => {
               onColor="#1ABC9C"
               handleToggle={() => setActive(!active)}
             />
-						<img src="/assets/close.svg" alt="Cerrar" className="close" />
+						<img src="/assets/close.svg" alt="Cerrar" className="close" onClick={close} />
           </div>
         </div>
         <p>
