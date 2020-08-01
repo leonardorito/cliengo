@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "./Card.scss";
 import SwitchToggle from "../SwitchToggle/SwitchToggle";
+import PropTypes from 'prop-types'
 
-const Card = () => {
-  const [value, setValue] = useState(false);
+const Card = (props) => {
+	const [value, setValue] = useState(false);
+	const {data} = props;
   return (
     <div className="Card">
       <div className="card-main-container">
 				<img src="/assets/conversacion.svg" className="card-img" alt="Conversacion"/>
-        <h5>Horario de atencion</h5>
-        <p>Atendemos de lunes a viernes de 9 a 18 hs y sabados de 10 a 13hs.</p>
+        <h5>{data.title}</h5>
+        <p>{data.description}</p>
       </div>
       <div className="options">
 				<img src="/assets/edit.svg" alt="Edit" className="edit-card" />
@@ -21,6 +23,10 @@ const Card = () => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  data: PropTypes.object.isRequired
 };
 
 export default Card;

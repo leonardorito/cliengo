@@ -33,7 +33,7 @@ const FrequentAnswer = () => {
         {answersList &&
           answersList.map((el) => (
             <div key={el.id} onClick={handleModal} className="col">
-              <Card />
+              <Card data={el} />
             </div>
           ))}
       </div>
