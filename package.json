@@ -10,7 +10,8 @@
     "lint": "eslint ./src/*.js",
     "lint:fix": "eslint --fix ./src/*.js",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "heroku-postbuild": "npm run build"
   },
   "jest": {
     "moduleNameMapper": {
@@ -54,8 +55,13 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
+	},
+	"engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
   }
 }
