@@ -26,6 +26,10 @@ h1 {
   font-weight: 600;
 }
 
+h4 {
+	font-size: 18px;
+}
+
 h5 {
   font-size: 16px;
 }
@@ -62,4 +66,13 @@ a {
     padding: 7px;
     box-sizing: border-box;
   }
+}
+
+.purple-text {
+	color: $purple;
+}
+
+.d-flex {
+	display: flex;
+	align-items: center;
 }

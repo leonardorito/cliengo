@@ -8,13 +8,16 @@ import ModalAnswerContent from "../../components/ModalAnswerContent/ModalAnswerC
 const FrequentAnswer = () => {
 	const { answersList, changeActive } = useContext(FrequentAnswerProvider);
 	const [showModal, setShowModal] = useState(false);
+	const [selectedAnswer, setSelectedAnswer] = useState(null)
 
-	const handleModal = () => {
+	const handleModal = (data) => {
+		setSelectedAnswer(data);
 		setShowModal(!showModal);
 	}
 
 	const handleActive = (answer) => {
 		changeActive(answer);
+		setShowModal(false);
 	}
   return (
     <div className="FrequentAnswer">
@@ -36,14 +39,14 @@ const FrequentAnswer = () => {
       <div className="row">
         {answersList &&
           answersList.map((el) => (
-            <div key={el.id} onClick={handleModal} className="col">
+            <div key={el.id} onClick={() => handleModal(el)} className="col">
               <Card data={el} changedActive={() => handleActive(el)} />
             </div>
           ))}
       </div>
-      <Modal show={showModal} modalClosed={handleModal}>
-        <ModalAnswerContent />
-      </Modal>
+      {showModal && <Modal show={showModal} modalClosed={handleModal}>
+        <ModalAnswerContent data={selectedAnswer} save={el => handleActive(el)} />
+      </Modal>}
     </div>
   );
 };

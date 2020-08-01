@@ -14,7 +14,8 @@ export const FrequentAnswerContext = ({ children }) => {
     const answerIndex = list.findIndex((el) => el.id === answer.id);
     list[answerIndex] = {
       ...list[answerIndex],
-      active: !answer.active,
+			active: !answer.active,
+			description: answer.description
     };
     setAnswersList(list);
     localStorage.setItem(ANSWERS, JSON.stringify(list));
