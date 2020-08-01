@@ -1,0 +1,35 @@
+@import "../../variables";
+
+.Card {
+  background-color: $white;
+	box-shadow: 0px 3px 6px $shadow-default;
+	border-radius: 4px;
+	cursor: pointer;
+  .card-main-container {
+		padding: 15px 15px 0 32px;
+		position: relative;
+		.card-img {
+			position: absolute;
+			left: 8px;
+			top: 17px;
+		}
+	}
+  h5 {
+    margin: 0;
+  }
+  .options {
+    height: 36px;
+    display: flex;
+    align-items: center;
+		justify-content: flex-end;
+		margin-top: 10px;
+		padding: 0 20px 0 15px;
+		border-top: 1px solid $disabled-gray;
+
+		.edit-card {
+			width: 14px;
+			height: 14px;
+			margin-right: 13px;
+		}
+  }
+}

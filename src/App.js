@@ -1,7 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import FrequentAnswer from "./containers/FrequentAnswer/FrequentAnswer";
+import { FrequentAnswerContext } from "./providers/FrequentAnswerProvider";
 
 const App = () => {
   return (
@@ -9,9 +15,11 @@ const App = () => {
       <Switch>
         <MainLayout>
           <Route exact path="/">
-            <FrequentAnswer />
+            <FrequentAnswerContext>
+              <FrequentAnswer />
+            </FrequentAnswerContext>
           </Route>
-					<Route path="*" render={() => <Redirect to="/" />} />
+          <Route path="*" render={() => <Redirect to="/" />} />
         </MainLayout>
       </Switch>
     </Router>

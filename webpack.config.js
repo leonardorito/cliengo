@@ -1,14 +1,15 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
     main: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "build"),
     filename: "[name].bundle.js",
-    chunkFilename: "[name].bundle.js"
+    chunkFilename: "[name].bundle.js",
   },
   module: {
     rules: [
@@ -19,11 +20,7 @@ module.exports = {
       },
       {
         test: /\.s(a|c)ss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
@@ -39,30 +36,38 @@ module.exports = {
     port: 3000,
 
     // Public path is root of content base
-		publicPath: "/",
-		historyApiFallback: true
+    publicPath: "/",
+    historyApiFallback: true,
   },
   optimization: {
     splitChunks: {
       chunks: "all",
     },
-	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			filename: 'index.html',
-			template: './public/template.html',
-			inject: true
-		})
-	],
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				commons: {
-					test: /[\\/]node_modules[\\/]/,
-					name: 'vendors',
-					chunks: 'all'
-				}
-			}
-		}
-	}
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./public/index.html",
+      inject: true,
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src", "assets"),
+          to: path.resolve(__dirname, "build", "assets"),
+        },
+      ],
+    }),
+  ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
+  },
 };
