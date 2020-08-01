@@ -4,7 +4,7 @@ const cardData = [
     title: "Horario de atención",
     description:
       "Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs.",
-    active: false,
+    active: true,
   },
   {
     id: 2,

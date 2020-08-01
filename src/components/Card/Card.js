@@ -4,8 +4,7 @@ import SwitchToggle from "../SwitchToggle/SwitchToggle";
 import PropTypes from 'prop-types'
 
 const Card = (props) => {
-	const [value, setValue] = useState(false);
-	const {data} = props;
+	const {data, changedActive} = props;
   return (
     <div className="Card">
       <div className="card-main-container">
@@ -16,9 +15,10 @@ const Card = (props) => {
       <div className="options">
 				<img src="/assets/edit.svg" alt="Edit" className="edit-card" />
         <SwitchToggle
-          isOn={value}
+					id={data.id}
+          isOn={data.active}
           onColor="#1ABC9C"
-          handleToggle={() => setValue(!value)}
+          handleToggle={changedActive}
         />
       </div>
     </div>

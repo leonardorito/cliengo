@@ -6,11 +6,15 @@ import Modal from "../../components/Modal/Modal";
 import ModalAnswerContent from "../../components/ModalAnswerContent/ModalAnswerContent";
 
 const FrequentAnswer = () => {
-	const { answersList } = useContext(FrequentAnswerProvider);
+	const { answersList, changeActive } = useContext(FrequentAnswerProvider);
 	const [showModal, setShowModal] = useState(false);
 
 	const handleModal = () => {
 		setShowModal(!showModal);
+	}
+
+	const handleActive = (answer) => {
+		changeActive(answer);
 	}
   return (
     <div className="FrequentAnswer">
@@ -33,7 +37,7 @@ const FrequentAnswer = () => {
         {answersList &&
           answersList.map((el) => (
             <div key={el.id} onClick={handleModal} className="col">
-              <Card data={el} />
+              <Card data={el} changedActive={() => handleActive(el)} />
             </div>
           ))}
       </div>
