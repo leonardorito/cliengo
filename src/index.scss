@@ -65,7 +65,21 @@ a {
     max-width: 33.333333%;
     padding: 7px;
     box-sizing: border-box;
-  }
+	}
+	
+	@media (max-width: 699px) {
+		.col {
+			flex: 1 0 50%;
+			max-width: 50%;
+		}
+	}
+
+	@media (max-width: 449px) {
+		.col {
+			flex: 1 0 100%;
+			max-width: 100%;
+		}
+	}
 }
 
 .purple-text {
