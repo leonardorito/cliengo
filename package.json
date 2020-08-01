@@ -10,7 +10,8 @@
     "lint": "eslint ./src/*.js",
     "lint:fix": "eslint --fix ./src/*.js",
     "test": "jest",
-    "test:watch": "jest --watchAll",
+		"test:watch": "jest --watchAll",
+		"start:heroku": "node server.js",
     "heroku-postbuild": "npm run build"
   },
   "jest": {
