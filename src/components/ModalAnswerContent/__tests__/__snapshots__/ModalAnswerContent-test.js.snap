@@ -86,11 +86,20 @@ exports[`ModalAnswerContent should render correctly 1`] = `
         , el chatbot responderá
       </b>
     </p>
-    <textarea
-      onChange={[Function]}
-      rows="2"
+    <ResizableTextArea
+      changeValue={[Function]}
       value="Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs."
-    />
+    >
+      <div
+        className="TextArea"
+      >
+        <textarea
+          onChange={[Function]}
+          rows={2}
+          value="Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs."
+        />
+      </div>
+    </ResizableTextArea>
     <div
       className="options"
     >

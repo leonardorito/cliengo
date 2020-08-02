@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode=development",
-    "build": "npm run lint:fix && webpack --mode=production",
+    "build": "npm run lint:fix && jest && webpack --mode=production",
     "dev": "webpack-dev-server --open",
     "lint": "eslint ./src/*.js",
     "lint:fix": "eslint --fix ./src/*.js",
