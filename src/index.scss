@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+*:focus {
+	outline: 0 !important;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, .5) !important;
+}
+
 html,
 body {
   height: 100%;

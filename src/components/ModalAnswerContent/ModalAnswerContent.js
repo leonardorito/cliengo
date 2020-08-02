@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import "./ModalAnswerContent.scss";
 import Button from "../Button/Button";
 import SwitchToggle from "../SwitchToggle/SwitchToggle";
+import ResizableTextArea from "../ResizableTextArea/ResizableTextArea";
 
 const ModalAnswerContent = ({ save, data, close }) => {
   const [description, setDescription] = useState(data.description);
@@ -13,7 +14,11 @@ const ModalAnswerContent = ({ save, data, close }) => {
       description,
       active: !active,
     });
-  };
+	};
+	
+	const handleTextArea = (value) => {
+		setDescription(value);
+	}
 
   return (
     <Fragment>
@@ -39,11 +44,11 @@ const ModalAnswerContent = ({ save, data, close }) => {
             responderá
           </b>
         </p>
-        <textarea
-          rows="2"
+				<ResizableTextArea value={description} changeValue={handleTextArea} />
+        {/* <textarea
           value={description}
-          onChange={(el) => setDescription(el.target.value)}
-        ></textarea>
+          onChange={(el) => handleTextArea(el)}
+        ></textarea> */}
         <div className="options">
           <Button text="Guardar" onClick={sendNewData} />
         </div>
