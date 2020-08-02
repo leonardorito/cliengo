@@ -1,33 +1,808 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Frequent answer should render 1`] = `
-<div
-  className="FrequentAnswer"
->
-  <h1
-    className="text-center mt-0"
-  >
-    Respuestas frecuentes
-  </h1>
-  <div>
-    <p>
-      <b>
-        Cliengo detecta las preguntas más frecuentes que hacen los clientes.
-      </b>
-    </p>
-    <p>
-      Optimiza el diálogo con ellos, configurando respuestas a estas preguntas desde aquí.
-    </p>
-    <p>
-      <a
-        href="#"
-      >
-        Cómo configurar respuestas automáticas
-      </a>
-    </p>
-  </div>
+exports[`Frequent answer should render with data 1`] = `
+<FrequentAnswer>
   <div
-    className="row"
-  />
-</div>
+    className="FrequentAnswer"
+  >
+    <h1
+      className="text-center mt-0"
+    >
+      Respuestas frecuentes
+    </h1>
+    <div>
+      <p>
+        <b>
+          Cliengo detecta las preguntas más frecuentes que hacen los clientes.
+        </b>
+      </p>
+      <p>
+        Optimiza el diálogo con ellos, configurando respuestas a estas preguntas desde aquí.
+      </p>
+      <p>
+        <a
+          href="#"
+        >
+          Cómo configurar respuestas automáticas
+        </a>
+      </p>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+        key="1"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": true,
+              "description": "Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs.",
+              "id": 1,
+              "title": "Horario de atención",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Horario de atención
+              </h5>
+              <p>
+                Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={1}
+                isOn={true}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={true}
+                    className="react-switch-checkbox"
+                    id="react-switch-1"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-1"
+                    style={
+                      Object {
+                        "background": "#1ABC9C",
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="2"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Nos encontramos en la calle Falsa 1234.",
+              "id": 2,
+              "title": "Ubicación de tu empresa",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Ubicación de tu empresa
+              </h5>
+              <p>
+                Nos encontramos en la calle Falsa 1234.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={2}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-2"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-2"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="3"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Hacemos envíos a todo el país.",
+              "id": 3,
+              "title": "Envíos",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Envíos
+              </h5>
+              <p>
+                Hacemos envíos a todo el país.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={3}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-3"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-3"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="4"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Los envíos tardan de 3 a 5 días hábiles.",
+              "id": 4,
+              "title": "Tiempo de envío",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Tiempo de envío
+              </h5>
+              <p>
+                Los envíos tardan de 3 a 5 días hábiles.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={4}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-4"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-4"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="5"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Puedes realizar tu compra con tarjeta de crédito, débito o transferencia.",
+              "id": 5,
+              "title": "Formas de pago",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Formas de pago
+              </h5>
+              <p>
+                Puedes realizar tu compra con tarjeta de crédito, débito o transferencia.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={5}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-5"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-5"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="6"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Debes contar con la certificación correspondiente.",
+              "id": 6,
+              "title": "Requisitos",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Requisitos
+              </h5>
+              <p>
+                Debes contar con la certificación correspondiente.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={6}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-6"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-6"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="7"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Indicanos en qué tienes interés y un asesor te enviará la cotización luego.",
+              "id": 7,
+              "title": "Precio",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Precio
+              </h5>
+              <p>
+                Indicanos en qué tienes interés y un asesor te enviará la cotización luego.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={7}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-7"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-7"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="8"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Dejanos tus datos y te enviaremos una lista de precios actualizada.",
+              "id": 8,
+              "title": "Lista de precios",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Lista de precios
+              </h5>
+              <p>
+                Dejanos tus datos y te enviaremos una lista de precios actualizada.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={8}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-8"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-8"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+      <div
+        className="col"
+        key="9"
+        onClick={[Function]}
+      >
+        <Card
+          changedActive={[Function]}
+          data={
+            Object {
+              "active": false,
+              "description": "Dejanos tus datos y te enviaremos la información.",
+              "id": 9,
+              "title": "Más información",
+            }
+          }
+        >
+          <div
+            className="Card"
+          >
+            <div
+              className="card-main-container"
+            >
+              <img
+                alt="Conversacion"
+                className="card-img"
+                src="/assets/conversacion.svg"
+              />
+              <h5>
+                Más información
+              </h5>
+              <p>
+                Dejanos tus datos y te enviaremos la información.
+              </p>
+            </div>
+            <div
+              className="options"
+            >
+              <img
+                alt="Edit"
+                className="edit-card"
+                src="/assets/edit.svg"
+              />
+              <SwitchToggle
+                handleToggle={[Function]}
+                id={9}
+                isOn={false}
+                onColor="#1ABC9C"
+              >
+                <div
+                  className="SwitchToggle"
+                >
+                  <input
+                    checked={false}
+                    className="react-switch-checkbox"
+                    id="react-switch-9"
+                    onChange={[Function]}
+                    style={
+                      Object {
+                        "display": "none",
+                      }
+                    }
+                    type="checkbox"
+                  />
+                  <label
+                    className="react-switch-label"
+                    htmlFor="react-switch-9"
+                    style={
+                      Object {
+                        "background": false,
+                      }
+                    }
+                  >
+                    <span
+                      className="react-switch-button"
+                    />
+                  </label>
+                </div>
+              </SwitchToggle>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </div>
+</FrequentAnswer>
+`;
+
+exports[`Frequent answer should render with no data 1`] = `
+<FrequentAnswer>
+  <div
+    className="FrequentAnswer"
+  >
+    <h1
+      className="text-center mt-0"
+    >
+      Respuestas frecuentes
+    </h1>
+    <div>
+      <p>
+        <b>
+          Cliengo detecta las preguntas más frecuentes que hacen los clientes.
+        </b>
+      </p>
+      <p>
+        Optimiza el diálogo con ellos, configurando respuestas a estas preguntas desde aquí.
+      </p>
+      <p>
+        <a
+          href="#"
+        >
+          Cómo configurar respuestas automáticas
+        </a>
+      </p>
+    </div>
+    <div
+      className="row"
+    />
+  </div>
+</FrequentAnswer>
 `;

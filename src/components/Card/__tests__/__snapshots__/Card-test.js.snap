@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render with data 1`] = `
+<Card
+  changedActive={[MockFunction]}
+  data={
+    Object {
+      "active": true,
+      "description": "Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs.",
+      "id": 1,
+      "title": "Horario de atención",
+    }
+  }
+>
+  <div
+    className="Card"
+  >
+    <div
+      className="card-main-container"
+    >
+      <img
+        alt="Conversacion"
+        className="card-img"
+        src="/assets/conversacion.svg"
+      />
+      <h5>
+        Horario de atención
+      </h5>
+      <p>
+        Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs.
+      </p>
+    </div>
+    <div
+      className="options"
+    >
+      <img
+        alt="Edit"
+        className="edit-card"
+        src="/assets/edit.svg"
+      />
+      <SwitchToggle
+        handleToggle={[MockFunction]}
+        id={1}
+        isOn={true}
+        onColor="#1ABC9C"
+      >
+        <div
+          className="SwitchToggle"
+        >
+          <input
+            checked={true}
+            className="react-switch-checkbox"
+            id="react-switch-1"
+            onChange={[MockFunction]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            type="checkbox"
+          />
+          <label
+            className="react-switch-label"
+            htmlFor="react-switch-1"
+            style={
+              Object {
+                "background": "#1ABC9C",
+              }
+            }
+          >
+            <span
+              className="react-switch-button"
+            />
+          </label>
+        </div>
+      </SwitchToggle>
+    </div>
+  </div>
+</Card>
+`;

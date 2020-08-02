@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalAnswerContent should render correctly 1`] = `
+<ModalAnswerContent
+  close={[MockFunction]}
+  data={
+    Object {
+      "active": true,
+      "description": "Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs.",
+      "id": 1,
+      "title": "Horario de atención",
+    }
+  }
+  save={[MockFunction]}
+>
+  <div
+    className="ModalAnswerContent"
+  >
+    <div
+      className="modal-title"
+    >
+      <h4>
+        <img
+          alt="Rapido"
+          className="modal-img"
+          src="/assets/flash.svg"
+        />
+        <span
+          className="purple-text"
+        >
+          Respuesta a: 
+        </span>
+        Horario de atención
+      </h4>
+      <div
+        className="d-flex"
+      >
+        <SwitchToggle
+          handleToggle={[Function]}
+          id="modal-1"
+          isOn={true}
+          onColor="#1ABC9C"
+        >
+          <div
+            className="SwitchToggle"
+          >
+            <input
+              checked={true}
+              className="react-switch-checkbox"
+              id="react-switch-modal-1"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+              type="checkbox"
+            />
+            <label
+              className="react-switch-label"
+              htmlFor="react-switch-modal-1"
+              style={
+                Object {
+                  "background": "#1ABC9C",
+                }
+              }
+            >
+              <span
+                className="react-switch-button"
+              />
+            </label>
+          </div>
+        </SwitchToggle>
+        <img
+          alt="Cerrar"
+          className="close"
+          onClick={[MockFunction]}
+          src="/assets/close.svg"
+        />
+      </div>
+    </div>
+    <p>
+      <b>
+        Si el cliente consulta por 
+        horario de atención
+        , el chatbot responderá
+      </b>
+    </p>
+    <textarea
+      onChange={[Function]}
+      rows="2"
+      value="Atendemos de lunes a viernes de 9 a 18 hs y sábados de 10 a 13hs."
+    />
+    <div
+      className="options"
+    >
+      <Button
+        onClick={[Function]}
+        text="Guardar"
+      >
+        <button
+          className="Button"
+          onClick={[Function]}
+        >
+          Guardar
+        </button>
+      </Button>
+    </div>
+  </div>
+</ModalAnswerContent>
+`;
