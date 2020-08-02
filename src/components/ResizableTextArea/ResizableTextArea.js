@@ -1,36 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ResizableTextArea.scss";
 
 const ResizableTextArea = ({ value, changeValue }) => {
+	const textAreaRef = useRef(null);
 	const [rows, setRows] = useState(2);
 	const minRows = 2;
 	const maxRows = 8;
+
+	useEffect(() => {
+		handleTextArea(textAreaRef.current);
+	}, [])
 	
-	const handleTextArea = (event) => {
+	const handleTextArea = (target) => {
 		const textareaLineHeight = 18;
-		const previousRows = event.target.rows;
-		event.target.rows = minRows; // reset number of rows in textarea 
-		const scrollHeight = event.target.scrollHeight;
+		const previousRows = target.rows;
+		target.rows = minRows; // reset number of rows in textarea 
+		const scrollHeight = target.scrollHeight;
 		const currentRows = Math.floor(scrollHeight / textareaLineHeight);
 
     if (currentRows === previousRows) {
-    	event.target.rows = currentRows;
+    	target.rows = currentRows;
     }
 		
 		if (currentRows >= maxRows) {
-			event.target.rows = maxRows;
-			event.target.scrollTop = event.target.scrollHeight;
+			target.rows = maxRows;
+			target.scrollTop = target.scrollHeight;
 		}
-
-		console.log(scrollHeight, currentRows, maxRows);
     
 		setRows(currentRows < maxRows ? currentRows : maxRows);
-		changeValue(event.target.value);
+		changeValue(target.value);
 	}
 
   return (
     <div className="TextArea">
-      <textarea rows={rows} value={value} onChange={(el) => handleTextArea(el)}></textarea>
+      <textarea ref={textAreaRef} rows={rows} value={value} onChange={(event) => handleTextArea(event.target)}></textarea>
     </div>
   );
 };
